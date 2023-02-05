@@ -27,6 +27,8 @@ const generateGrid = function(rows, cols, location) {
 // add listener for grid toggle
 const gridToggle = document.querySelector("#gridToggle");
 gridToggle.addEventListener('click', () => {
+    gridToggle.classList.toggle("inactive");
+    gridToggle.classList.toggle("active");
     const pixels = document.querySelectorAll(".pixel"); // have to get updated pixel info
     pixels.forEach((pixel) => {
         pixel.classList.toggle("gridBorder");
@@ -40,7 +42,11 @@ document.addEventListener('mouseup', () => isMouseDown = !isMouseDown);
 // Add eraser button listener
 isEraserActive = false;
 const eraser = document.querySelector("#eraser");
-eraser.addEventListener('click', () => isEraserActive = !isEraserActive);
+eraser.addEventListener('click', () => {
+    eraser.classList.toggle("inactive");
+    eraser.classList.toggle("active");
+    isEraserActive = !isEraserActive
+});
 
 // Colours in pixel after being clicked
 const paint = function(pixel) {

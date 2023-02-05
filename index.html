@@ -6,15 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="styles.css">
-    <title>PXL - Pixel Art Canvas</title>
+    <title>PXL-JS --- Pixel Art Canvas</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>PXL-JS</h1>
+
+    <p>A basic pixel art tool made by Henry</p>
+    <a href="https://github.com/DevelopmentHF/pxl-js">Source code</a>
+
     <div class="content" draggable="false">
         <div id="canvas" draggable="false"></div>
-        <button id="eraser">Eraser Mode</button>
-        <button id="gridToggle">Toggle Grid</button>
-        <button id="gridSize">Change Grid Size</button>
+        <div class="btns">
+            <button class="inactive" id="eraser">Eraser Mode</button>
+            <button class="inactive" id="gridToggle">Toggle Grid</button>
+            <button id="gridSize">Change Grid Size</button>
+        </div>
     </div>
 </body>
 </html>

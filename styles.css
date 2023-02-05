@@ -1,6 +1,36 @@
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Press Start 2P', cursive;
+    color: #FFFFFF;
+    background-color: #121212;
+}
+
+.btns {
+    display: flex;
+    gap: 15px;
+}
+
+
+button {
+    font-family: inherit;
+    padding: 15px;
+    flex: 1;
+    border: none;
+    border-radius: 3px;
+}
+
+a {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+.inactive {
+    background-color: #CF6679;
+}
+
+.active {
+    background-color: #03DAC6;
 }
 
 .content {
@@ -19,6 +49,7 @@ body {
     min-height: 500px;
     min-width: 500px;
     user-select: none;
+    margin-bottom: 25px;
 }
 
 .row {
@@ -46,4 +77,8 @@ body {
 
 .painted {
     background-color: black;
+}
+
+#gridSize {
+    background-color: #BB86FC;
 }
