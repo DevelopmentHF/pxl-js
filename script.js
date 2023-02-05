@@ -27,6 +27,7 @@ const generateGrid = function(rows, cols, location) {
 // add listener for grid toggle
 const gridToggle = document.querySelector("#gridToggle");
 gridToggle.addEventListener('click', () => {
+    const pixels = document.querySelectorAll(".pixel"); // have to get updated pixel info
     pixels.forEach((pixel) => {
         pixel.classList.toggle("gridBorder");
     })
@@ -67,9 +68,7 @@ changeSize.addEventListener('click', () => {
 
 // Lets pixels listen for click and drag events on it
 const generatePixelListeners = function() {
-    // add listener for paint to all pixels
     const pixels = document.querySelectorAll(".pixel");
-
     pixels.forEach((pixel) => {
         pixel.addEventListener('mousedown', () => {
             paint(pixel);
