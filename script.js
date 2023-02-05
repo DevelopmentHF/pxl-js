@@ -17,6 +17,7 @@ const generateGrid = function(rows, cols, location) {
             const element = document.createElement('div');
             element.classList.add("pixel");
             element.classList.add("unpainted");
+            element.classList.add("gridBorder");
             newRow.appendChild(element);
         }
         location.appendChild(newRow);
@@ -37,5 +38,13 @@ const pixels = document.querySelectorAll(".pixel");
 pixels.forEach((pixel) => {
     pixel.addEventListener('click', () => {
         paint(pixel);
+    })
+})
+
+// add listener for grid toggle
+const gridToggle = document.querySelector("#gridToggle");
+gridToggle.addEventListener('click', () => {
+    pixels.forEach((pixel) => {
+        pixel.classList.toggle("gridBorder");
     })
 })
