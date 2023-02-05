@@ -18,15 +18,13 @@ body {
 }
 
 .pixel {
-    min-height: 20px;
-    min-width: 20px;
+    min-height: 4vmin;
+    min-width: 4vmin;
     flex: 1;
 }
 
 .gridBorder {
-    border-style: solid;
-    border-width: 2px;
-    border-color: #d5d6d7;
+    box-shadow:inset 0px 0px 0px 1px #d5d6d7;
 }
 
 .pixel:hover {
